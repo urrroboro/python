@@ -1,0 +1,2 @@
+def digits(num: int):
+    return len("".join(list(map(str, list(range(1, num))))))
