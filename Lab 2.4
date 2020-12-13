@@ -1,0 +1,8 @@
+def can_see_stage(seats):
+    res = True
+    for i in range(len(seats)):
+        if i == 0: continue
+        for j in range(len(seats[i])):
+            if seats[i][j] <= seats[i-1][j]:
+                res = False
+    return res
