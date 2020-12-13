@@ -1,0 +1,7 @@
+def time_adjust(t_str, hrs, mins, sec):
+	    (h, m, s) = list(map(int, t_str.split(':')))
+	    s += sec
+	    m += mins + (s // 60)
+	    h += hrs + (m // 60)
+	    (s, m, h) = (s % 60, m % 60, h % 24)
+	    return '{:02d}:{:02d}:{:02d}'.format(h, m, s)
