@@ -1,7 +1,0 @@
-gl = ["a", "e", "i", "o", "u", "y"]
-gld = {v: i for i, v in enumerate(gl)}
-
-def ex3(string):
-  return "".join(map(lambda x : str(gld[x]) if x in gl else x , string[::-1])) + "aca"
-
-print(ex3("apple"))
