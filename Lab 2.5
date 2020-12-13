@@ -1,0 +1,9 @@
+from datetime import datetime
+
+def sort_dates(lst, mode):
+    pattern = "%d-%m-%Y_%H:%M"
+    if mode == "ASC":
+        lst.sort(key = lambda date: datetime.strptime(date, pattern))
+    else:
+        lst.sort(key = lambda date: datetime.strptime(date, pattern), reverse=True)
+    return lst
